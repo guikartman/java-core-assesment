@@ -10,8 +10,6 @@ public abstract class Product {
     protected BigDecimal price;
     protected String description;
     protected Integer quantity;
-    protected String color;
-    protected Character gender;
     protected Image image;
 
     private SubCollection subCollection;
@@ -73,22 +71,6 @@ public abstract class Product {
         this.subCollection = subCollection;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public Character getGender() {
-        return gender;
-    }
-
-    public void setGender(Character gender) {
-        this.gender = gender;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -113,14 +95,6 @@ public abstract class Product {
         }
 
         if (this.getSubCollection() == null ) {
-            valid = false;
-        }
-
-        if(this.getColor().isEmpty() || this.getColor().equals("")) {
-            valid = false;
-        }
-
-        if(!this.getGender().equals('M') && !this.getGender().equals('F')) {
             valid = false;
         }
 

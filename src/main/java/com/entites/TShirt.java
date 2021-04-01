@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 public class TShirt extends Product {
     private Size size;
     private boolean isLong;
+    private String color;
+    private Character gender;
 
     public TShirt() {
         super();
@@ -35,10 +37,34 @@ public class TShirt extends Product {
         isLong = aLong;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Character getGender() {
+        return gender;
+    }
+
+    public void setGender(Character gender) {
+        this.gender = gender;
+    }
+
     public boolean isValidTwo() {
         boolean valid = true;
 
         if(this.getSize() == null) {
+            valid = false;
+        }
+
+        if(this.getColor().isEmpty() || this.getColor().equals("")) {
+            valid = false;
+        }
+
+        if(!this.getGender().equals('M') && !this.getGender().equals('F')) {
             valid = false;
         }
 

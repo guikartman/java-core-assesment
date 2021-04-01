@@ -6,6 +6,8 @@ public class Pants extends Product{
     private Size size;
     private String activity;
     private String material;
+    private String color;
+    private Character gender;
 
     public Pants(){
     }
@@ -43,6 +45,22 @@ public class Pants extends Product{
         this.material = material;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Character getGender() {
+        return gender;
+    }
+
+    public void setGender(Character gender) {
+        this.gender = gender;
+    }
+
     public boolean isValidTwo() {
         boolean valid = true;
 
@@ -55,6 +73,14 @@ public class Pants extends Product{
         }
 
         if (this.getMaterial().isEmpty() || this.getMaterial().equals("")) {
+            valid = false;
+        }
+
+        if(this.getColor().isEmpty() || this.getColor().equals("")) {
+            valid = false;
+        }
+
+        if(!this.getGender().equals('M') && !this.getGender().equals('F')) {
             valid = false;
         }
 
