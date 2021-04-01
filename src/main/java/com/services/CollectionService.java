@@ -1,15 +1,10 @@
 package com.services;
 
-import com.entites.Collection;
-import com.entites.Pants;
-import com.entites.Product;
-import com.entites.Sneakers;
-import com.entites.SubCollection;
-import com.entites.TShirt;
-import com.exception.ProductNotFoundException;
+import com.entites.*;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 /**
  * This class is responsable to manage collections and sub-collections
